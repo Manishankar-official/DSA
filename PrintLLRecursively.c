@@ -14,6 +14,16 @@ void PrintLL(struct node *head){
     head = head->next;
   }
 }
+
+//printing a LL recursively//
+void PrintLLRecursive(struct node* head){
+  if(head ==NULL){
+    return;
+  }
+  printf("\n%d\n",head->data);
+  PrintLLRecursive(head->next);
+
+}
 //creating a node
 struct node * CreateANode(struct node * head,int data){
 head = (struct node *)malloc(sizeof(*head));
@@ -41,5 +51,7 @@ int main(){
   AddLLNode(head,1);
   AddLLNode(head,1929);
   PrintLL(head);
+  printf("\nRecursively printing :::: \n");
+  PrintLLRecursive(head);
   return 0;
 }
