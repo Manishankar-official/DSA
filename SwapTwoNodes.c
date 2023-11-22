@@ -45,7 +45,7 @@ struct node * SwapTwoAdjNodes(struct node *head){
 
 int main(){
   struct node * head = NULL;
-  for(int i=0;i<4;i++){
+  for(int i=0;i<10;i++){
     head = AddNodeLL(head,(i+1));
   }
   printf("\nBefore Swapping ::::\n");
